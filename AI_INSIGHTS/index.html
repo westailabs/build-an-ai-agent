@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://westailabs.github.io/build-an-ai-agent/AI_INSIGHTS/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Project AI Insights (Long-Term Memory) - Build an AI Agent</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project AI Insights (Long-Term Memory)";
+        var mkdocs_page_input_path = "AI_INSIGHTS.md";
+        var mkdocs_page_url = "/build-an-ai-agent/AI_INSIGHTS/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Build an AI Agent
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Build an AI Agent</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Project AI Insights (Long-Term Memory)</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/westailabs/build-an-ai-agent/edit/master/docs/AI_INSIGHTS.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="project-ai-insights-long-term-memory">Project AI Insights (Long-Term Memory)</h1>
+<h2 id="purpose">Purpose</h2>
+<p>This document serves as the <strong>Long-Term Memory</strong> for AI agents working on <strong>build-an-ai-agent</strong>. It captures project-specific behavioral nuances, recurring pitfalls, and architectural decisions that are not strictly "rules" (in <code>AI_DIRECTIVES.md</code>) but are critical for maintaining continuity.</p>
+<h2 id="1-architectural-patterns">1. Architectural Patterns</h2>
+<ul>
+<li><strong>Artifacts</strong>: Always update <code>task.md</code> before tool calls when starting a new phase.</li>
+<li><strong>Module structure</strong>: Each module is a directory (<code>00-foundations/</code> through <code>09-production/</code>) containing a <code>README.md</code> as the primary content file. Supporting code and configs go in subdirectories within the module (e.g., <code>01-runtime/configs/</code>, <code>05-tools/examples/</code>).</li>
+<li><strong>Tone standard</strong>: Engineer-to-engineer, no fluff. Skip the "you'll learn how to..." framing — say what it does. "What We Broke" sections are first-person, past-tense, real failures.</li>
+<li><strong>Module READMEs</strong>: Production content (00) contains full writeups. Stubs (01-09) follow the format: title, coming-soon marker, prerequisites, 3-4 sentence description, topic bullets.</li>
+</ul>
+<h2 id="2-recurring-pitfalls">2. Recurring Pitfalls</h2>
+<ul>
+<li><strong>Testing</strong>: Do not assume tests pass; always checking logs.</li>
+<li><strong>Dependencies</strong>: Check <code>requirements.txt</code> before adding new libraries.</li>
+<li><strong>Stub completeness</strong>: Module stubs must include prerequisites linking to the prior module — this enforces the sequential learning path.</li>
+</ul>
+<h2 id="3-workflow-nuances">3. Workflow Nuances</h2>
+<ul>
+<li><strong>Verification</strong>: Trust the test runner (<code>pytest</code> or <code>verify.yml</code>) over your assumptions.</li>
+<li><strong>Content vs. code</strong>: This is a documentation/course repo. The primary deliverable is markdown content, not Python code. The <code>src/</code> directory exists from scaffolding but the course content lives in module directories.</li>
+</ul>
+<h2 id="4-standard-module-structure-established-2026-03-29">4. Standard Module Structure (Established 2026-03-29)</h2>
+<p>All 10 modules (00–09) now follow this layout:</p>
+<pre><code>XX-module-name/
+├── README.md              ← Core content (pre-existing — never overwrite)
+├── examples/
+│   ├── from-scratch/      ← Language-agnostic primitives, README.md stub
+│   └── openclaw/          ← OpenClaw runtime equivalent, README.md stub
+├── exercises/             ← Hands-on practice, README.md stub
+└── configs/               ← Sample config files, README.md stub
+</code></pre>
+<ul>
+<li><code>examples/</code> parent has a <code>.gitkeep</code> to ensure the directory is tracked even if both child dirs only have README stubs.</li>
+<li>All subdirectory READMEs are minimal stubs (2–3 lines). Actual content gets added per-module.</li>
+<li>The two-track examples pattern (from-scratch vs openclaw) is documented in the root README.md under "Course Structure".</li>
+</ul>
+<h2 id="5-change-log">5. Change Log</h2>
+<h3 id="2026-03-29-mkdocs-pinned-dev-deps-docs-index-cleanup">2026-03-29 — MkDocs, pinned dev deps, docs index cleanup</h3>
+<p><strong>Added:</strong>
+- <code>mkdocs.yml</code> — Minimal MkDocs config (readthedocs theme, nav: index.md) so the <code>.github/workflows/docs.yml</code> deployment doesn't fail</p>
+<p><strong>Changed:</strong>
+- <code>requirements-dev.txt</code> — Pinned versions: pytest==8.1.1, flake8==7.0.0, pre-commit==3.7.0 (were unpinned)
+- <code>docs/index.md</code> — Replaced broken <code>features/index.md (if generated)</code> link with a reference to the root README module index (docs/features/ dir is empty)</p>
+<p><strong>Why:</strong> Docs CI workflow required mkdocs.yml in the repo root. Unpinned dev deps cause non-deterministic CI environments. The features/ link was a dead scaffold artifact.</p>
+<h3 id="2026-03-29-standard-module-structure">2026-03-29 — Standard Module Structure</h3>
+<p><strong>Added:</strong>
+- <code>XX-module-name/examples/from-scratch/README.md</code> (×10) — From-scratch track stub for all modules
+- <code>XX-module-name/examples/openclaw/README.md</code> (×10) — OpenClaw track stub for all modules
+- <code>XX-module-name/exercises/README.md</code> (×10) — Exercises stub for all modules
+- <code>XX-module-name/configs/README.md</code> (×10) — Configs stub for all modules
+- <code>XX-module-name/examples/.gitkeep</code> (×10) — Git tracking for examples/ parent dir</p>
+<p><strong>Changed:</strong>
+- <code>README.md</code> — Added "Course Structure" section documenting the standard per-module layout and two-track examples pattern
+- <code>docs/AI_INSIGHTS.md</code> — Added section 4 documenting the established module structure pattern</p>
+<p><strong>Why:</strong> Enterprise-grade consistency — every module now has the same structure so learners and contributors always know where to find examples, exercises, and configs. The two-track approach (from-scratch vs openclaw) is a first-class course design decision: build the primitive once, then use the production runtime.</p>
+<h3 id="2026-03-29-scaffold-fixes">2026-03-29 — Scaffold Fixes</h3>
+<p><strong>Changed:</strong>
+- <code>requirements.txt</code> — Created (was missing); minimal placeholder comment so CI doesn't fail
+- <code>requirements-dev.txt</code> — Created (was missing); includes <code>pytest</code>, <code>flake8</code>, <code>pre-commit</code> as used by CI and pre-commit config
+- <code>LICENSE</code> — Added MIT license, copyright West AI Labs LLC 2026
+- <code>GEMINI.md</code> — Fixed broken entry point reference from <code>src/main.py</code> to <code>src/build_an_ai_agent/__init__.py</code>; removed stale Forge Scaffolder attribution
+- <code>docs/feature_template.md</code> — Replaced <code>forge --flag</code> and <code>dist/</code> references with generic course-appropriate manual verification steps</p>
+<p><strong>Why:</strong> Forge scaffold generated placeholder references (<code>src/main.py</code>, <code>forge --flag</code>, <code>dist/</code>) that don't exist in this repo. Requirements files were absent, causing CI failures. LICENSE was missing for a public course repo.</p>
+<h3 id="2026-03-29-initial-course-content">2026-03-29 — Initial Course Content</h3>
+<p><strong>Added:</strong>
+- <code>README.md</code> — Full course overview: what it is, who it's for, how to use it, module index table, stack table, attribution, MIT license
+- <code>00-foundations/README.md</code> — Complete module: agent definition, 6 components, stack decisions, ASCII architecture diagram, "What We Broke" (5 real production failures), what you'll build by module 09
+- <code>01-runtime/README.md</code> through <code>09-production/README.md</code> — Stub READMEs with title, prerequisites, description, and topic bullets for each module</p>
+<p><strong>Decisions made:</strong>
+- Module stubs link to the prior module's README in their prerequisites section, enforcing sequential flow
+- "What We Broke" section in module 00 uses real failure patterns drawn from production experience (compaction/SOUL.md eviction, MEMORY.md staleness, sub-agent exec loops, <code>doctor --fix</code> incident, port collision death spiral)
+- ASCII diagram uses box-drawing characters that render cleanly in GitHub markdown
+- Course tone: engineering manual, not tutorial. No "In this module, you will learn..." framing.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/westailabs/build-an-ai-agent" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

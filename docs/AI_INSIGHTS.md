@@ -23,6 +23,16 @@ This document serves as the **Long-Term Memory** for AI agents working on **buil
 
 ## 4. Change Log
 
+### 2026-03-29 — Scaffold Fixes
+**Changed:**
+- `requirements.txt` — Created (was missing); minimal placeholder comment so CI doesn't fail
+- `requirements-dev.txt` — Created (was missing); includes `pytest`, `flake8`, `pre-commit` as used by CI and pre-commit config
+- `LICENSE` — Added MIT license, copyright West AI Labs LLC 2026
+- `GEMINI.md` — Fixed broken entry point reference from `src/main.py` to `src/build_an_ai_agent/__init__.py`; removed stale Forge Scaffolder attribution
+- `docs/feature_template.md` — Replaced `forge --flag` and `dist/` references with generic course-appropriate manual verification steps
+
+**Why:** Forge scaffold generated placeholder references (`src/main.py`, `forge --flag`, `dist/`) that don't exist in this repo. Requirements files were absent, causing CI failures. LICENSE was missing for a public course repo.
+
 ### 2026-03-29 — Initial Course Content
 **Added:**
 - `README.md` — Full course overview: what it is, who it's for, how to use it, module index table, stack table, attribution, MIT license

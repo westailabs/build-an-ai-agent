@@ -21,8 +21,8 @@ List specific, testable requirements:
 - [ ] Logic Verified: [Describe what is tested]
 
 **Manual Verification**:
-- [ ] Step 1: Run `forge --flag`
-- [ ] Step 2: Verify output in `dist/`
+- [ ] Step 1: Run the module or script locally and confirm expected output
+- [ ] Step 2: Review generated files or logs for correctness
 
 ## 5. Workflow Checklist
 Follow the AI Behavior strict workflow:

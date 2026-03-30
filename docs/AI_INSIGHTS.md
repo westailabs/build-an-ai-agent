@@ -21,7 +21,40 @@ This document serves as the **Long-Term Memory** for AI agents working on **buil
 - **Verification**: Trust the test runner (`pytest` or `verify.yml`) over your assumptions.
 - **Content vs. code**: This is a documentation/course repo. The primary deliverable is markdown content, not Python code. The `src/` directory exists from scaffolding but the course content lives in module directories.
 
-## 4. Change Log
+## 4. Standard Module Structure (Established 2026-03-29)
+
+All 10 modules (00–09) now follow this layout:
+
+```
+XX-module-name/
+├── README.md              ← Core content (pre-existing — never overwrite)
+├── examples/
+│   ├── from-scratch/      ← Language-agnostic primitives, README.md stub
+│   └── openclaw/          ← OpenClaw runtime equivalent, README.md stub
+├── exercises/             ← Hands-on practice, README.md stub
+└── configs/               ← Sample config files, README.md stub
+```
+
+- `examples/` parent has a `.gitkeep` to ensure the directory is tracked even if both child dirs only have README stubs.
+- All subdirectory READMEs are minimal stubs (2–3 lines). Actual content gets added per-module.
+- The two-track examples pattern (from-scratch vs openclaw) is documented in the root README.md under "Course Structure".
+
+## 5. Change Log
+
+### 2026-03-29 — Standard Module Structure
+
+**Added:**
+- `XX-module-name/examples/from-scratch/README.md` (×10) — From-scratch track stub for all modules
+- `XX-module-name/examples/openclaw/README.md` (×10) — OpenClaw track stub for all modules
+- `XX-module-name/exercises/README.md` (×10) — Exercises stub for all modules
+- `XX-module-name/configs/README.md` (×10) — Configs stub for all modules
+- `XX-module-name/examples/.gitkeep` (×10) — Git tracking for examples/ parent dir
+
+**Changed:**
+- `README.md` — Added "Course Structure" section documenting the standard per-module layout and two-track examples pattern
+- `docs/AI_INSIGHTS.md` — Added section 4 documenting the established module structure pattern
+
+**Why:** Enterprise-grade consistency — every module now has the same structure so learners and contributors always know where to find examples, exercises, and configs. The two-track approach (from-scratch vs openclaw) is a first-class course design decision: build the primitive once, then use the production runtime.
 
 ### 2026-03-29 — Scaffold Fixes
 **Changed:**

@@ -78,6 +78,33 @@ Every module has:
 
 ---
 
+## Course Structure
+
+Every module follows the same layout:
+
+```
+XX-module-name/
+├── README.md              ← Core content: concepts, production lessons, "What We Broke"
+├── examples/
+│   ├── from-scratch/      ← Build it yourself using language-agnostic primitives
+│   └── openclaw/          ← Production-equivalent using OpenClaw runtime
+├── exercises/             ← Hands-on practice problems (attempt after reading the README)
+└── configs/               ← Sample config files referenced in the module
+```
+
+### Two-Track Examples
+
+Each module includes two parallel example tracks:
+
+| Track | Directory | What it is |
+|-------|-----------|------------|
+| **From Scratch** | `examples/from-scratch/` | Build the primitive yourself — raw Python, shell, or config. No runtime magic. Teaches the underlying mechanic. |
+| **OpenClaw** | `examples/openclaw/` | The production-ready equivalent using OpenClaw. What you'd actually ship. Teaches the operational pattern. |
+
+Work both tracks. The from-scratch version shows you what's really happening. The OpenClaw version shows you how to not rebuild it every time.
+
+---
+
 ## The Stack
 
 This course uses [OpenClaw](https://github.com/westailabs) as the agent runtime. It's not the only option, but it's the one we've actually run in production for months. The concepts transfer to any runtime — the patterns are what matter.

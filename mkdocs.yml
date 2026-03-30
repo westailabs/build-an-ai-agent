@@ -1,0 +1,12 @@
+site_name: Build an AI Agent
+site_description: A production AI agent course built from real experience
+site_url: https://westailabs.github.io/build-an-ai-agent/
+repo_url: https://github.com/westailabs/build-an-ai-agent
+
+docs_dir: docs
+
+theme:
+  name: readthedocs
+
+nav:
+  - Home: index.md

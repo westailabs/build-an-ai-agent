@@ -41,6 +41,17 @@ XX-module-name/
 
 ## 5. Change Log
 
+### 2026-03-29 — MkDocs, pinned dev deps, docs index cleanup
+
+**Added:**
+- `mkdocs.yml` — Minimal MkDocs config (readthedocs theme, nav: index.md) so the `.github/workflows/docs.yml` deployment doesn't fail
+
+**Changed:**
+- `requirements-dev.txt` — Pinned versions: pytest==8.1.1, flake8==7.0.0, pre-commit==3.7.0 (were unpinned)
+- `docs/index.md` — Replaced broken `features/index.md (if generated)` link with a reference to the root README module index (docs/features/ dir is empty)
+
+**Why:** Docs CI workflow required mkdocs.yml in the repo root. Unpinned dev deps cause non-deterministic CI environments. The features/ link was a dead scaffold artifact.
+
 ### 2026-03-29 — Standard Module Structure
 
 **Added:**

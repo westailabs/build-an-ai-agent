@@ -6,8 +6,6 @@ Welcome to the documentation for **build-an-ai-agent**.
 
 Please refer to the [README](../README.md) for installation and usage instructions.
 
-## Features
+## Modules
 
-Explore the features of this project:
-
-- [Feature Overview](features/index.md) (if generated)
+See the [README](../README.md) for the full module index (00-foundations through 09-production).

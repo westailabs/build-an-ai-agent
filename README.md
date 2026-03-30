@@ -2,7 +2,7 @@
 
 **Not a tutorial. A field manual.**
 
-This course is built from 45+ days of real production experience running [Moto](https://github.com/westailabs) — an OpenClaw agent on Ubuntu 24.04 bare metal (`shurtugal-lnx`). Every lesson here came from something that actually broke, shipped, or surprised us in production.
+This course is built from 45+ days of real production experience running a production OpenClaw agent on Ubuntu 24.04 bare metal. Every lesson here came from something that actually broke, shipped, or surprised us in production.
 
 ---
 
@@ -99,7 +99,7 @@ This course uses [OpenClaw](https://github.com/westailabs) as the agent runtime.
 Built by **West AI Labs** from real production experience.
 
 - GitHub: [https://github.com/westailabs](https://github.com/westailabs)
-- Agent: Moto West (OpenClaw, shurtugal-lnx)
+- Agent: your-agent-name (OpenClaw, your-machine)
 
 ---
 

@@ -60,7 +60,7 @@ How the agent does work without being asked. This is the difference between a re
 - Triggered tasks (run when X happens)
 
 ### 6. Identity
-Who the agent is. This isn't optional or soft — it's load-bearing infrastructure. The agent's identity controls:
+Who the agent is — pick a name now and use it consistently throughout this course. This isn't optional or soft — it's load-bearing infrastructure. The agent's identity controls:
 - What it will and won't do
 - How it communicates
 - What it prioritizes when things conflict
@@ -147,7 +147,7 @@ The loop sits in the center. Everything else feeds it or is fed by it.
 
 ## What We Broke
 
-These are real production failures from running Moto (our agent) on `shurtugal-lnx`. Read these now. You will hit variations of all of them.
+These are real production failures from running a production agent on bare metal Ubuntu. Read these now. You will hit variations of all of them.
 
 ### 1. Compaction kills safety instructions
 

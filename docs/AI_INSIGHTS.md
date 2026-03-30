@@ -23,7 +23,7 @@ This document serves as the **Long-Term Memory** for AI agents working on **buil
 
 ## 4. Change Log
 
-### 2026-03-29 — Initial Course Content (Moto / sub-agent)
+### 2026-03-29 — Initial Course Content
 **Added:**
 - `README.md` — Full course overview: what it is, who it's for, how to use it, module index table, stack table, attribution, MIT license
 - `00-foundations/README.md` — Complete module: agent definition, 6 components, stack decisions, ASCII architecture diagram, "What We Broke" (5 real production failures), what you'll build by module 09
@@ -31,6 +31,6 @@ This document serves as the **Long-Term Memory** for AI agents working on **buil
 
 **Decisions made:**
 - Module stubs link to the prior module's README in their prerequisites section, enforcing sequential flow
-- "What We Broke" section in module 00 uses real failure names drawn from Moto production history (compaction/SOUL.md eviction, MEMORY.md staleness, sub-agent exec loops, `doctor --fix` incident, port collision death spiral)
+- "What We Broke" section in module 00 uses real failure patterns drawn from production experience (compaction/SOUL.md eviction, MEMORY.md staleness, sub-agent exec loops, `doctor --fix` incident, port collision death spiral)
 - ASCII diagram uses box-drawing characters that render cleanly in GitHub markdown
 - Course tone: engineering manual, not tutorial. No "In this module, you will learn..." framing.

@@ -1,0 +1,94 @@
+[forge]
+version = "2.0.0"
+profile = "base"
+generated_at = "2026-03-30T00:17:27.161336+00:00"
+
+[variables]
+project_name = "build-an-ai-agent"
+author_name = "West AI Labs"
+author_email = "jason@westailabs.io"
+description = "Production AI agent course — no toy demos. Real architecture, real lessons, real deployment."
+python_version = "3.11"
+manager = "pip"
+license = "MIT"
+project_slug = "build_an_ai_agent"
+
+[files.managed."README.md"]
+template = "README.md.j2"
+hash = "731662c33ef813c2"
+
+[files.managed."CONTEXT.md"]
+template = "CONTEXT.md.j2"
+hash = "5ef4091f35c867f9"
+
+[files.managed."AI_DIRECTIVES.md"]
+template = "AI_DIRECTIVES.md.j2"
+hash = "cd14fdb951edcb57"
+
+[files.managed."WORKFLOW.md"]
+template = "WORKFLOW.md.j2"
+hash = "4df64f838de6bef0"
+
+[files.managed."GEMINI.md"]
+template = "GEMINI.md.j2"
+hash = "e2b71a56b615f286"
+
+[files.managed."CLAUDE.md"]
+template = "CLAUDE.md.j2"
+hash = "69e9b2df5984d976"
+
+[files.managed.".gitignore"]
+template = ".gitignore.j2"
+hash = "d0966c3265430fa6"
+
+[files.managed.".flake8"]
+template = ".flake8.j2"
+hash = "bbea775d7a4d193c"
+
+[files.managed.".yamllint"]
+template = ".yamllint.j2"
+hash = "13c161ab9bbf787c"
+
+[files.managed.".pre-commit-config.yaml"]
+template = ".pre-commit-config.yaml.j2"
+hash = "1c68b7ce21786c40"
+
+[files.managed."docs/index.md"]
+template = "docs/index.md.j2"
+hash = "30438b3dcf409bfc"
+
+[files.managed."docs/feature_template.md"]
+template = "docs/feature_template.md.j2"
+hash = "2b25594fc6273806"
+
+[files.managed."docs/AI_INSIGHTS.md"]
+template = "docs/AI_INSIGHTS.md.j2"
+hash = "bd15e1a936f2d03c"
+
+[files.managed.".github/workflows/docs.yml"]
+template = ".github/workflows/docs.yml.j2"
+hash = "0bef81ec420ce2a0"
+
+[files.managed."pyproject.toml"]
+template = "pyproject.toml.j2"
+hash = "0e1f3f0e26fa924f"
+
+[files.managed."src/build_an_ai_agent/__init__.py"]
+template = "__init__.py.j2"
+hash = "01ba4719c80b6fe9"
+
+[files.managed."tests/__init__.py"]
+template = "__init__.py.j2"
+hash = "01ba4719c80b6fe9"
+
+[files.managed."tests/test_initial.py"]
+template = "tests/test_initial.py.j2"
+hash = "5b1a98f9e81181b6"
+
+[files.managed.".agent/rules/ai_behavior.md"]
+template = ".agent/rules/ai_behavior.md.j2"
+hash = "24d1bf7be20a3767"
+
+[files.managed.".github/workflows/unittests.yml"]
+template = ".github/workflows/unittests.yml.j2"
+hash = "d67f08d13c4525c9"
